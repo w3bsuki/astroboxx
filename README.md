@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Astrobox Portfolio Website
+
+A clean, modern portfolio website for Astrobox, showcasing products and services with a beautiful and easy-to-navigate design.
+
+## Tech Stack
+
+- **Frontend Framework**: Next.js 15.2 (App Router)
+- **UI Library**: React 19.0
+- **Language**: TypeScript 5.4
+- **Styling**: Tailwind CSS 3.4
+- **Component Library**: Radix UI Primitives
+- **Animations**: Framer Motion 12.4
+- **Icons**: Lucide Icons 0.477
+- **Utilities**: Class Variance Authority, clsx, tailwind-merge
+- **Package Manager**: PNPM
+
+## Features
+
+- Responsive design that works on all devices
+- Dark mode support with system preference detection
+- Clean, boxed layout for better readability
+- Animated navigation with active state indicators
+- Showcase for products and services
+- Modern UI components built with Radix UI primitives
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.0 or later
+- PNPM package manager
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/astrobox.git
+cd astrobox
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+astrobox/
+├── public/             # Static assets
+├── src/
+│   ├── app/            # Next.js App Router pages
+│   ├── components/     # React components
+│   │   ├── ui/         # UI components (buttons, dropdowns, etc.)
+│   │   ├── header.tsx  # Site header with navigation
+│   │   ├── footer.tsx  # Site footer
+│   │   └── ...
+│   ├── lib/            # Utility functions and shared code
+│   └── ...
+├── tailwind.config.ts  # Tailwind CSS configuration
+├── next.config.ts      # Next.js configuration
+└── ...
+```
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project uses Tailwind CSS for styling. You can customize the theme by editing the `tailwind.config.ts` file.
+
+### Components
+
+UI components are built using Radix UI primitives and can be found in the `src/components/ui` directory. These components are designed to be accessible and customizable.
+
+### Content
+
+Update the content in the page files located in the `src/app` directory to match your requirements.
+
+## Deployment
+
+The project can be deployed to any platform that supports Next.js, such as Vercel, Netlify, or a custom server.
+
+```bash
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide Icons](https://lucide.dev/)
