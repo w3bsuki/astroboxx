@@ -37,15 +37,15 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl">Astrobox</span>
+            <span className="font-bold text-2xl">Astrobox</span>
           </Link>
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary relative",
+                  "text-base font-medium transition-colors hover:text-primary relative",
                   pathname === item.path
                     ? "text-foreground"
                     : "text-foreground/60"

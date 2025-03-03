@@ -1,0 +1,102 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+## **Tech Stack**
+
+- Next.js 15.2 (App Router)
+- React 19.0
+- TypeScript 5.4
+- Tailwind CSS 3.4
+- Radix UI Primitives (latest)
+- Framer Motion 11.0
+- Lucide Icons 0.475.0
+- Class Variance Authority (latest)
+- Shadcn/ui (latest)
+- PNPM (latest)
+- Encore.ts (for backend, TypeScript version)
+
+
+## **STRICT RULES - ALWAYS FOLLOW**
+
+**PROJECT INITIALIZATION**
+
+1. **Environment Setup**
+    - Ensure the latest stable versions of Node.js and PNPM are installed
+    - Set up a .nvmrc file to specify the Node.js version for consistency
+2. **Version Control**
+    - Initialize a Git repository before starting and create an initial commit
+    - Set up a .gitignore file tailored for Next.js projects
+3. **Code Quality Tools**
+    - Set up ESLint, Prettier, and TypeScript configurations at the start of the project
+    - Configure Husky and lint-staged for pre-commit hooks
+4. **Documentation**
+    - Start with a basic README.md file outlining the project structure and setup instructions
+5. **Component Library**
+    - Set up Storybook for component development and documentation
+6. **Testing Setup**
+    - Set up Jest and React Testing Library configurations early in the project
+7. **CI/CD**
+    - Set up a basic GitHub Actions workflow for continuous integration
+8. **Performance Monitoring**
+    - Integrate Next.js Analytics to track performance metrics from the beginning
+
+”PROJECT RULES”
+
+**WE ARE BUILDING FRONTEND NOW - FOCUS ON CLIENT-SIDE DEVELOPMENT**
+
+1. **Technology Stack**
+    - Use Next.js 15.2 (@https://nextjs.org/docs)[1%5B1)]
+    - React 19.0 (@https://pieces.app/blog/react-19-comprehensive-guide)[2%5B2)]
+    - TypeScript 5.4+ (@https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/)[3%5B3)]
+    - Tailwind CSS 3.4+ (@https://tailwindcss.com/blog/tailwindcss-v3-4)[4%5B4)]
+    - Radix UI Primitives (latest) (@https://www.radix-ui.com/primitives/docs/overview/introduction)[5%5B5)]
+    - Framer Motion 11+ (@https://www.syncfusion.com/blogs/post/react-animations-framer-motion-guide)[6%5B6)]
+    - Lucide Icons (latest) (@https://getpublii.com/docs/lucide-icons.html)[7%5B7)]
+    - Class Variance Authority (latest) (@https://stevekinney.net/courses/storybook/class-variance-authority)[8%5B8)]
+2. **Package Management**
+    - ALWAYS use PNPM as the package manager
+    - NEVER downgrade dependencies or revert to older package managers
+    - Run **`pnpm update --latest`** regularly to keep dependencies up-to-date
+3. **Project Structure**
+    - Adhere to the Next.js 15.2 App Router structure
+    - Use **`src`** directory to separate application code from configuration files
+    - Implement route groups and private folders for better organization
+4. **Development Practices**
+    - Use TypeScript for all code files
+    - Implement ESLint and Prettier for code linting and formatting
+    - Set up Husky for pre-commit hooks
+    - Follow SOLID principles in component and function design
+5. **Performance Optimization**
+    - Implement code splitting and lazy loading
+    - Use Next.js Image component for automatic image optimization
+    - Minimize external dependencies and optimize bundle size
+6. **State Management**
+    - Use React's built-in state management (useState, useContext) for simple state
+    - For complex state, use Zustand or Jotai
+7. **Styling**
+    - Use Tailwind CSS for utility-first styling
+    - Implement a consistent theming system using Tailwind's configuration
+    - Utilize Class Variance Authority for component variants
+8. **Component Development**
+    - Use Radix UI Primitives as the foundation for accessible components
+    - Enhance components with Framer Motion for smooth animations
+    - Implement Lucide Icons for consistent iconography
+9. **Testing**
+    - Write unit tests for components and functions using Jest and React Testing Library
+    - Implement end-to-end testing using Cypress or Playwright
+10. **Version Control**
+    - Use Git with a clear branching strategy (e.g., GitFlow)
+    - Write meaningful commit messages following conventional commits specification
+11. **Documentation**
+    - Maintain a comprehensive README.md
+    - Use JSDoc comments for documenting functions and components
+
+**12. Development Pace**
+
+- Build the project incrementally, focusing on one component or section at a time
+- Start with core components before moving to more complex features
+- Test and refine each component before moving to the next
+
+WORK IN SMALL INCREMENTS. DONT TRY TO DO ALL THE WORK AT ONCE

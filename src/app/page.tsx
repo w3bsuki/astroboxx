@@ -7,29 +7,29 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-20">
+        <section className="py-20 md:py-28">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+            <div className="flex flex-col items-center justify-center space-y-6 text-center">
+              <div className="space-y-3">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                   Welcome to Astrobox
                 </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl">
                   A clean, modern portfolio showcasing our products and services.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="text-base">
                   <Link href="/products">
                     View Products
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" asChild className="text-base">
                   <Link href="/services">Our Services</Link>
                 </Button>
               </div>
@@ -38,25 +38,25 @@ export default function Home() {
         </section>
 
         {/* Featured Products Section */}
-        <section className="py-12 bg-muted/50">
+        <section className="py-20 bg-muted/50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Featured Products
                 </h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground">
+                <p className="mx-auto max-w-[600px] text-muted-foreground text-lg">
                   Discover our most popular products designed to meet your needs.
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               {[1, 2, 3].map((product) => (
                 <div
                   key={product}
-                  className="flex flex-col items-center space-y-4 rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md"
+                  className="flex flex-col items-center space-y-4 rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md"
                 >
-                  <div className="aspect-square w-full relative rounded-md overflow-hidden">
+                  <div className="aspect-square w-full relative rounded-lg overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="text-4xl font-bold text-primary">
@@ -65,21 +65,21 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-2 text-center">
-                    <h3 className="font-bold">Product {product}</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="text-xl font-bold">Product {product}</h3>
+                    <p className="text-muted-foreground">
                       A brief description of product {product} and its features.
                     </p>
                   </div>
                   <Button variant="outline" size="sm" asChild>
-                    <Link href={`/products/product-${product}`}>
+                    <Link href={`/products`}>
                       Learn More
                     </Link>
                   </Button>
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mt-8">
-              <Button variant="outline" asChild>
+            <div className="flex justify-center mt-12">
+              <Button variant="outline" asChild className="text-base">
                 <Link href="/products">View All Products</Link>
               </Button>
             </div>
@@ -87,48 +87,48 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-12">
+        <section className="py-20">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Our Services
                 </h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground">
+                <p className="mx-auto max-w-[600px] text-muted-foreground text-lg">
                   Professional services tailored to your specific requirements.
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               {[1, 2, 3].map((service) => (
                 <div
                   key={service}
-                  className="flex flex-col items-center space-y-4 rounded-lg border bg-card p-6"
+                  className="flex flex-col items-center space-y-4 rounded-xl border bg-card p-8"
                 >
-                  <div className="p-2 rounded-full bg-primary/10">
-                    <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-lg font-bold text-primary">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
+                      <span className="text-xl font-bold text-primary">
                         {service}
                       </span>
                     </div>
                   </div>
                   <div className="space-y-2 text-center">
-                    <h3 className="font-bold">Service {service}</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="text-xl font-bold">Service {service}</h3>
+                    <p className="text-muted-foreground">
                       A brief description of service {service} and what it
                       entails.
                     </p>
                   </div>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link href={`/services/service-${service}`}>
+                    <Link href={`/services`}>
                       Learn More
                     </Link>
                   </Button>
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mt-8">
-              <Button variant="outline" asChild>
+            <div className="flex justify-center mt-12">
+              <Button variant="outline" asChild className="text-base">
                 <Link href="/services">View All Services</Link>
               </Button>
             </div>
@@ -136,21 +136,21 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 bg-primary text-primary-foreground">
+        <section className="py-20 bg-primary text-primary-foreground">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Ready to Get Started?
                 </h2>
-                <p className="mx-auto max-w-[600px] opacity-90">
+                <p className="mx-auto max-w-[600px] opacity-90 text-lg">
                   Contact us today to discuss how we can help with your project.
                 </p>
               </div>
               <Button
                 variant="secondary"
                 size="lg"
-                className="mt-4"
+                className="mt-6 text-base"
                 asChild
               >
                 <Link href="/contact">Contact Us</Link>
